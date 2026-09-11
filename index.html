@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="甜點日和：收藏蛋糕、塔派與冰品靈感的甜點展示網站。" />
+  <title>甜點日和｜Dessert Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="甜點日和首頁">
+        <span class="brand-mark">D</span>
+        <span>甜點日和</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <nav id="main-nav" class="main-nav" aria-label="主要導覽">
+        <a href="#featured">精選甜點</a>
+        <a href="#about">關於本站</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">DESSERT JOURNAL</p>
+          <h1>把每一口甜，<br />留成值得回味的作品。</h1>
+          <p class="hero-text">從細緻蛋糕、酥香塔派，到沁涼冰品，這裡收藏甜點的風味、故事與創作靈感。</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#featured">開始探索</a>
+            <a class="btn secondary" href="#about">網站介紹</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="甜點主視覺">
+          <div class="hero-illustration">
+            <div class="plate"></div>
+            <div class="cake-layer layer-1"></div>
+            <div class="cake-layer layer-2"></div>
+            <div class="cake-top"></div>
+            <div class="berry berry-a"></div>
+            <div class="berry berry-b"></div>
+            <div class="berry berry-c"></div>
+          </div>
+          <div class="hero-note">今日推薦 · 草莓香草千層</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FEATURED</p>
+            <h2>本日甜點精選</h2>
+          </div>
+          <p>以資料驅動方式產生卡片，之後新增條目只需修改 JavaScript 中的內容資料。</p>
+        </div>
+        <div id="dessert-grid" class="dessert-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-soft">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">ABOUT</p>
+          <h2>一個能持續擴充的甜點展示空間</h2>
+        </div>
+        <div class="about-copy">
+          <p>每個甜點條目都可自由加入文字、圖片、影片、HTML 作品與簡報內容。版面採模組化元件設計，新增作品時不需要重新改寫整個頁面。</p>
+          <div class="feature-chips" aria-label="支援內容格式">
+            <span>文字</span><span>圖片</span><span>影片</span><span>HTML</span><span>簡報</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">SHARE YOUR SWEET MOMENT</p>
+          <h2>下一份甜點，想收藏什麼？</h2>
+          <p>你可以把這個網站當成甜點作品集、餐廳推薦頁、課程展示頁，或個人甜點筆記。</p>
+        </div>
+        <a class="btn primary" href="mailto:hello@example.com">聯絡我們</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <span>© <span id="year"></span> 甜點日和</span>
+      <span>Made for sweet ideas.</span>
+    </div>
+  </footer>
+
+  <div id="detail-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close-modal aria-label="關閉">×</button>
+      <div id="modal-content"></div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
